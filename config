@@ -30,7 +30,7 @@ font pango:monospace 8
 floating_modifier $mod
 
 # start a terminal
-bindsym $mod+Return exec i3-sensible-terminal
+bindsym $mod+Return exec i3-sensible-terminal --hide-menubar
 
 # kill focused window
 bindsym $mod+Shift+q kill
@@ -213,3 +213,7 @@ assign [class="Google-chrome"] $ws1
 assign [class="TelegramDesktop"] $ws9
 assign [class="jetbrains-studio"] $ws4
 assign [class="Org.gnome.Nautilus"] $ws3
+
+#Hiding Title bar
+for_window [class="^.*"] border pixel 1
+new_window 1pixel
