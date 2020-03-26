@@ -188,21 +188,28 @@ bar {
 }
 
 #startup
-exec_always feh --bg-scale ~/Wallpapers/minimalist-abstract-hexagon-colorful-a1949.jpg
+exec_always feh --bg-scale ~/Wallpapers/solarized-wallpaper-root.png
 exec xfce4-power-manager
 exec /opt/Telegram/Telegram
 exec kdeconnect-indicator
-exec shutter
+
 
 #my bindings
 #screen shot
-bindsym Print exec shutter -f
-bindsym Shift+Print exec shutter -s
+bindsym Shift+Print exec flameshot gui
+bindsym Print exec flameshot full -c
+bindsym Ctrl+Print exec flameshot full -p /home/hashik/Pictures/flameshot
 bindsym $mod+F5 exec /home/hashik/.config/i3/detectdiplays.sh
+
+#shutter
+#exec shutter - shutter on startup
+#bindsym Print exec shutter -f
+#bindsym Shift+Print exec shutter -s
+#assign [class="Shutter"] $ws10
+
 
 #workspace specific applications
 assign [class="Google-chrome"] $ws1
 assign [class="TelegramDesktop"] $ws9
 assign [class="jetbrains-studio"] $ws4
 assign [class="Org.gnome.Nautilus"] $ws3
-assign [class="Shutter"] $ws10
