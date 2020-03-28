@@ -205,6 +205,7 @@ bindsym Shift+Print exec flameshot gui
 bindsym Print exec flameshot full -c
 bindsym Ctrl+Print exec flameshot full -p /home/hashik/Pictures/flameshot
 bindsym $mod+F5 exec /home/hashik/.config/i3/detectdiplays.sh
+bindsym $mod+t exec env XDG_CURRENT_DESKTOP=kde dolphin
 
 #shutter
 #exec shutter - shutter on startup
