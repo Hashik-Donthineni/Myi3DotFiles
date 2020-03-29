@@ -190,6 +190,19 @@ bindsym $mod+r mode "resize"
 # finds out, if available)
 bar {
         status_command i3status
+        font pango:Roboto Mono 8
+
+        colors {
+                background #030911
+                statusline #FFFFFF
+                separator  #666666
+
+                focused_workspace  #4C7899 #285577 #FFFFFF
+                active_workspace   #333333 #1D1D1D #FFFFFF
+                inactive_workspace #333333 #1D1D1D #888888
+                urgent_workspace   #2F343A #900000 #FFFFFF
+                binding_mode       #2F343A #900000 #FFFFFF
+        }
 }
 
 #startup
