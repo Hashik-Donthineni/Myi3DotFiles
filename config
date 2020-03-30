@@ -133,7 +133,7 @@ bindsym $mod+Shift+0 move container to workspace $ws10
 # Pulse Audio controls
 #bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume 0 +5% #increase sound volume
 #bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume 0 -5% #decrease sound volume
-bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute 0 toggle # mute sound
+#bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute 0 toggle # mute sound
 
 bindsym $mod+F9 exec --no-startup-id pactl set-sink-volume 0 +5% #increase sound volume
 bindsym  $mod+F8 exec --no-startup-id pactl set-sink-volume 0 -5% #decrease sound volume
@@ -207,6 +207,7 @@ bar {
 
 #startup
 exec_always feh --bg-scale ~/Wallpapers/solarized-wallpaper-root.png
+exec_always xrdb -load ~/.config/i3/.Xresources #Rofi config
 exec xfce4-power-manager
 exec /opt/Telegram/Telegram
 exec kdeconnect-indicator
