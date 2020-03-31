@@ -220,6 +220,7 @@ bindsym Print exec flameshot full -c
 bindsym Ctrl+Print exec flameshot full -p /home/hashik/Pictures/flameshot
 bindsym $mod+F5 exec /home/hashik/.config/i3/detectdiplays.sh
 bindsym $mod+t exec env XDG_CURRENT_DESKTOP=kde dolphin
+bindsym $mod+c exec google-chrome
 
 #shutter
 #exec shutter - shutter on startup
@@ -230,9 +231,9 @@ bindsym $mod+t exec env XDG_CURRENT_DESKTOP=kde dolphin
 
 #workspace specific applications
 assign [class="Google-chrome"] $ws1
+assign [class="Firefox"] $ws1
 assign [class="TelegramDesktop"] $ws9
 assign [class="jetbrains-studio"] $ws4
-assign [class="Org.gnome.Nautilus"] $ws3
 
 #Hiding Title bar
 for_window [class="^.*"] border pixel 1
