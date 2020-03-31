@@ -237,7 +237,7 @@ assign [class="jetbrains-studio"] $ws4
 
 #Hiding Title bar
 for_window [class="^.*"] border pixel 1
-for_window [class="Google-chrome"] border pixel 0
-for_window [class="Firefox"] border pixel 0
-for_window [class="VirtualBox Machine"] border pixel 0
+for_window [class="Google-chrome"] border none
+for_window [class="Firefox"] border none
+for_window [class="VirtualBox Machine"] border none
 new_window 1pixel
