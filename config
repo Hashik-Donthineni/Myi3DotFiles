@@ -135,9 +135,15 @@ bindsym $mod+Shift+0 move container to workspace $ws10
 #bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume 0 -5% #decrease sound volume
 #bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute 0 toggle # mute sound
 
-bindsym $mod+F9 exec --no-startup-id pactl set-sink-volume 0 +5% #increase sound volume
-bindsym  $mod+F8 exec --no-startup-id pactl set-sink-volume 0 -5% #decrease sound volume
-bindsym $mod+F10 exec --no-startup-id pactl set-sink-mute 0 toggle # mute sound
+#Old bindings replaced with scripts
+#bindsym $mod+F9 exec --no-startup-id pactl set-sink-volume 0 +5% #increase sound volume
+#bindsym  $mod+F8 exec --no-startup-id pactl set-sink-volume 0 -5% #decrease sound volume
+#bindsym $mod+F10 exec --no-startup-id pactl set-sink-mute 0 toggle # mute sound
+
+#Volume control with script
+bindsym $mod+F9 exec ~/.config/i3/volume_increase.sh 
+bindsym $mod+F8 exec ~/.config/i3/volume_decrease.sh 
+bindsym $mod+F10 exec ~/.config/i3/volume_mute.sh 
 
 # Sreen brightness controls
 bindsym XF86MonBrightnessUp exec xbacklight -inc 20 # increase screen brightness
@@ -210,7 +216,7 @@ exec_always feh --bg-scale ~/Wallpapers/solarized-wallpaper-root.png
 exec_always xrdb -load ~/.config/i3/.Xresources #Rofi config
 exec ~/.config/i3/detectdiplays.sh
 exec xfce4-power-manager
-exec /opt/Telegram/Telegram
+#exec /opt/Telegram/Telegram
 exec kdeconnect-indicator
 
 
