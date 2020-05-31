@@ -212,12 +212,13 @@ bar {
 }
 
 #startup
-exec_always feh --bg-scale ~/Wallpapers/solarized-wallpaper-root.png
+exec_always feh --bg-scale ~/Wallpapers/underwater.png
 exec_always xrdb -load ~/.config/i3/.Xresources #Rofi config
 exec ~/.config/i3/detectdiplays.sh
 exec xfce4-power-manager
 #exec /opt/Telegram/Telegram
 exec kdeconnect-indicator
+exec copyq
 
 
 #my bindings
@@ -226,6 +227,7 @@ bindsym Shift+Print exec flameshot gui
 bindsym Print exec flameshot full -c
 bindsym Ctrl+Print exec flameshot full -p ~/Pictures/Flameshot
 bindsym $mod+F5 exec ~/.config/i3/detectdiplays.sh
+bindsym $mod+g exec code 
 bindsym $mod+t exec env XDG_CURRENT_DESKTOP=kde dolphin
 bindsym $mod+c exec google-chrome
 
@@ -240,7 +242,14 @@ bindsym $mod+c exec google-chrome
 assign [class="Google-chrome"] $ws1
 assign [class="Firefox"] $ws1
 assign [class="TelegramDesktop"] $ws9
+assign [class="Hexchat"] $ws9
+assign [class="teams-for-linux"] $ws9
 assign [class="jetbrains-studio"] $ws4
+assign [title="Android Emulator - Pixel_3_API_27:5554"] $ws5
+
+#Floating Mode 
+for_window [class="copyq"] floating enable
+for_window [title="Android Emulator"] floating enable
 
 #Hiding Title bar
 for_window [class="^.*"] border pixel 1
