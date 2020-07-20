@@ -218,6 +218,7 @@ exec ~/.config/i3/detectdiplays.sh
 exec xfce4-power-manager
 #exec /opt/Telegram/Telegram
 exec kdeconnect-indicator
+exec redshift -O 2500
 exec copyq
 
 
@@ -227,6 +228,8 @@ bindsym Shift+Print exec flameshot gui
 bindsym Print exec flameshot full -c
 bindsym Ctrl+Print exec flameshot full -p ~/Pictures/Flameshot
 bindsym $mod+F5 exec ~/.config/i3/detectdiplays.sh
+bindsym $mod+z exec xrandr --output HDMI-2 --off --output HDMI-1 --off --output DP-1 --off --output eDP-1 --mode 1366x768 --pos 0x0 --rotate normal --output DP-2 --off
+bindsym $mod+c exec xrandr --output HDMI-2 --off --output HDMI-1 --off --output DP-1 --off --output eDP-1 --primary --mode 1366x768 --pos 0x1050 --rotate normal --output DP-2 --mode 1680x1050 --pos 0x0 --rotate normal
 bindsym $mod+g exec code 
 bindsym $mod+t exec env XDG_CURRENT_DESKTOP=kde dolphin
 bindsym $mod+b exec brave-browser
