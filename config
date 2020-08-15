@@ -95,16 +95,16 @@ bindsym $mod+a focus parent
 
 # Define names for default workspaces for which we configure key bindings later on.
 # We use variables to avoid repeating the names in multiple places.
-set $ws1 "1: "
-set $ws2 "2: "
-set $ws3 "3: " 
-set $ws4 "4: " 
-set $ws5 "5: "
-set $ws6 "6: " 
-set $ws7 "7: "
-set $ws8 "8: "
-set $ws9 "9: "
-set $ws10 "10: "
+set $ws1 "1: 🌐"
+set $ws2 "2: >_"
+set $ws3 "3: 📂" 
+set $ws4 "4: 🔨" 
+set $ws5 "5: ❓"
+set $ws6 "6: ❓" 
+set $ws7 "7: ❓"
+set $ws8 "8: ❓"
+set $ws9 "9: 💬"
+set $ws10 "10: ❓"
 
 # switch to workspace
 bindsym $mod+1 workspace $ws1
@@ -212,26 +212,29 @@ bar {
 }
 
 #startup
-exec_always feh --bg-scale ~/Wallpapers/underwater.png
+exec_always feh --bg-scale /home/hashikd/Pictures/Wallpapers/solarized-wallpaper-root.png
 exec_always xrdb -load ~/.config/i3/.Xresources #Rofi config
 exec ~/.config/i3/detectdiplays.sh
 exec xfce4-power-manager
-#exec /opt/Telegram/Telegram
 exec kdeconnect-indicator
 exec redshift -O 2500
 exec copyq
-
+#exec /opt/Telegram/Telegram
 
 #my bindings
 #screen shot
 bindsym Shift+Print exec flameshot gui
 bindsym Print exec flameshot full -c
 bindsym Ctrl+Print exec flameshot full -p ~/Pictures/Flameshot
+
 bindsym $mod+F5 exec ~/.config/i3/detectdiplays.sh
 bindsym $mod+z exec xrandr --output HDMI-2 --off --output HDMI-1 --off --output DP-1 --off --output eDP-1 --mode 1366x768 --pos 0x0 --rotate normal --output DP-2 --off
 bindsym $mod+c exec xrandr --output HDMI-2 --off --output HDMI-1 --off --output DP-1 --off --output eDP-1 --primary --mode 1366x768 --pos 0x1050 --rotate normal --output DP-2 --mode 1680x1050 --pos 0x0 --rotate normal
+
 bindsym $mod+g exec code 
-bindsym $mod+t exec env XDG_CURRENT_DESKTOP=kde dolphin
+
+bindsym $mod+t exec nautilus
+
 bindsym $mod+b exec brave-browser
 #bindsym $mod+b exec google-chrome
 
